@@ -17,3 +17,5 @@ INSERT INTO Productos
     ('Pantalon', 'F', '28', 75.50),
     ('Camisa', 'M', 'XL', 150.99),
     ('Short', 'M', 'M', 169.90);
+
+select * from Productos;
