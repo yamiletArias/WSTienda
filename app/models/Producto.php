@@ -51,7 +51,8 @@ class Producto extends Conexion{
         $params["tipo"],
         $params["genero"],
         $params["talla"],
-        $params["precio"]
+        $params["precio"],
+        $params["id"]
         ));
         return $saveStatus;
     } catch (Exception $e) {

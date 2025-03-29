@@ -23,7 +23,9 @@ if ($metodo == 'GET') {
   header('HTTP/1.1 200 OK');
   echo json_encode($registroProduc);
 
-} else if ($metodo == 'POST') {
+} 
+
+else if ($metodo == 'POST') {
 
   $inputJSON = file_get_contents('php://input');
   $datos = json_decode($inputJSON, true);
@@ -40,7 +42,8 @@ if ($metodo == 'GET') {
   header('HTTP/1.1 200 OK');
   echo json_encode(["status" => $status]);
 
-} else if($metodo == "PUT"){
+} 
+else if($metodo == "PUT"){
   $inputJSON = file_get_contents("php://input");
   $datos = json_decode($inputJSON,true);
   $registroProduc = [
@@ -55,7 +58,8 @@ if ($metodo == 'GET') {
   header("HTTP/1.1 200 OK");
   echo json_encode(["status"=> $status]);
 
-} else if ($metodo == 'DELETE'){
+} 
+else if ($metodo == 'DELETE'){
 
   $requestURI = $_SERVER['REQUEST_URI'];
   $uriSegments = explode('/', $requestURI);
